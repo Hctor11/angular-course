@@ -1,17 +1,12 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <app-header />
 <main>
   <ul id="users">
     <li>
-      <app-user />
+      <app-user [avatar]="users[0].avatar" [name]="users[0].name"/>
+    </li>
+    <li>
+      <app-user [avatar]="users[1].avatar" [name]="users[1].name"/>
     </li>
   </ul>
 </main>
