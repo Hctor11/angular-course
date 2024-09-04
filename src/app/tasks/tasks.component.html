@@ -7,8 +7,10 @@
   </div>
 
   <ul>
+    @for(task of tasks; track task.id){
     <li>
-        <app-task></app-task>
+      <app-task></app-task>
     </li>
+    }
   </ul>
 </section>
