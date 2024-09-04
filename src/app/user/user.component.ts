@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter, output } from '@angular/core';
 import { DUMMY_USERS } from '../dummy-users';
+import type User from './user.model';
 
 // type User = {
 //   id: string;
@@ -7,11 +8,7 @@ import { DUMMY_USERS } from '../dummy-users';
 //   name: string;
 // }
 
-interface User {
-  id: string;
-  avatar: string;
-  name: string;
-}
+
 
 @Component({
   selector: 'app-user',
@@ -27,6 +24,7 @@ export class UserComponent {
     avatar: string;
     name: string;
   };
+  @Input({required: true}) selected!: boolean;
   @Input({required: true}) id!: string;
   @Input({required: true}) avatar!: string;
   @Input({required: true}) name!: string;

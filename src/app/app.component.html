@@ -4,6 +4,7 @@
     <!-- @for (user of users; track user.id; ){ -->
     <li *ngFor="let user of users">
       <app-user
+        [selected]="user.id === selectedUserId"
         [id]="user.id"
         [avatar]="user.avatar"
         [name]="user.name"
@@ -23,13 +24,11 @@
     </li> -->
   </ul>
 
-  <!-- @if (selectedUserId) { -->
-  <app-tasks *ngIf="selectedUser; else fallback" [name]="selectedUser!.name" />
-  <!-- } @else { -->
-    <ng-template #fallback>
+  @if (selectedUserId) {
+  <app-tasks [userId]="selectedUser.id" [name]="selectedUser!.name" />
+  } @else {
       <p id="fallback">Select a person</p>
-    </ng-template>
-  <!-- } -->
+  }
 </main>
 
 <!-- ese trabajo no me va a caer del cielo -->
