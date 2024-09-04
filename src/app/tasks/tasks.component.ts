@@ -10,4 +10,34 @@ import { TaskComponent } from './task/task.component';
 })
 export class TasksComponent {
   @Input() name: string | undefined;
+  tasks = [
+    {
+      id: 't1',
+      userId: 'u1',
+      title: 'Master Angular',
+      summary: 'Latin Top Jobs Group, es un grupo de empresas con presencia regional',
+      dueDate: '2025-12-31'
+    },
+    {
+      id: 't2',
+      userId: 'u1',
+      title: 'Master',
+      summary: 'con presencia',
+      dueDate: '2025-05-31'
+    },
+    {
+      id: 't3',
+      userId: 'u2',
+      title: 'Ang',
+      summary: 'Group, es un grupo de presencia',
+      dueDate: '2025-02-22'
+    },
+    {
+      id: 't4',
+      userId: 'u3',
+      title: 'Mas',
+      summary: 'Jobs Group',
+      dueDate: '2025-12-31'
+    },
+  ]
 }
