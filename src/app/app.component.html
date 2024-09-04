@@ -1,25 +1,18 @@
 <app-header />
 <main>
   <ul id="users">
+    @for (user of users; track user.id; ){
     <li>
       <app-user
-        [id]="users[0].id"
-        [avatar]="users[0].avatar"
-        [name]="users[0].name"
+        [id]="user.id"
+        [avatar]="user.avatar"
+        [name]="user.name"
         (select)="onSelectUser($event)"
-        [userObj]="users[1]"
+        [userObj]="user"
       />
     </li>
-    <li>
-      <app-user
-        [id]="users[1].id"
-        [avatar]="users[1].avatar"
-        [name]="users[1].name"
-        (select)="onSelectUser($event)"
-        [userObj]="users[2]"
-      />
-    </li>
-    <li>
+    }
+    <!-- <li>
       <app-user
         [id]="users[2].id"
         [avatar]="users[2].avatar"
@@ -27,10 +20,12 @@
         (select)="onSelectUser($event)"
         [userObj]="users[3]"
       />
-    </li>
+    </li> -->
   </ul>
 
+  @if (selectedUserId) {
   <app-tasks [name]="selectedUser.name" />
+  }
 </main>
 
 <!-- ese trabajo no me va a caer del cielo -->
