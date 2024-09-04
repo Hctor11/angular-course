@@ -6,6 +6,12 @@
     background-color: #3a2c54;
   }
   
+
+  .tasks-header{
+    display: flex;
+    justify-content: space-between;
+  }
+
   header {
     display: flex;
     justify-content: space-between;
